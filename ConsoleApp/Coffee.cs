@@ -1,7 +1,7 @@
-﻿using ConsoleApp.Enum;
-using ConsoleApp.Interface;
+﻿using ConsoleApp1.Enum;
+using ConsoleApp1.Interface;
 
-namespace ConsoleApp;
+namespace ConsoleApp1;
 
 public class Coffee : IProduct
 {

@@ -1,10 +1,11 @@
-﻿using ConsoleApp.Extension;
+﻿using ConsoleApp1.Extension;
+using ConsoleApp1.Interface;
 
-namespace ConsoleApp;
+namespace ConsoleApp1;
 
 public class Logistics
 {
-    public List<Coffee> Box { get; set; }
+    public List<IProduct> Box { get; init; }
 
     public string List()
     {

@@ -1,6 +1,6 @@
-﻿using ConsoleApp;
-using ConsoleApp.Enum;
-using ConsoleApp.Interface;
+﻿using ConsoleApp1;
+using ConsoleApp1.Enum;
+using ConsoleApp1.Interface;
 
 var originalMaker = GetCoffeeMaker(Taste.Original);
 var caramelMaker = GetCoffeeMaker(Taste.Caramel);
@@ -15,10 +15,12 @@ var coffees =
     .SelectMany(s => s)
     .ToList();
 
-var logistics = new Logistics { Box = coffees };
+var logistics = new Logistics { Box = new List<IProduct>(coffees) };
 var list = logistics.List();
 
 Console.WriteLine($" 一箱 = [ {list} ]");
+
+
 
 ICoffeeMaker GetCoffeeMaker(Taste taste)
 {

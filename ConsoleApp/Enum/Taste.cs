@@ -1,4 +1,4 @@
-namespace ConsoleApp.Enum;
+namespace ConsoleApp1.Enum;
 
 public enum Taste
 {

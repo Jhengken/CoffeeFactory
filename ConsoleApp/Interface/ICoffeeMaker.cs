@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Interface;
+﻿namespace ConsoleApp1.Interface;
 
 public interface ICoffeeMaker
 {

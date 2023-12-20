@@ -1,16 +1,17 @@
-﻿using ConsoleApp.Enum;
-using ConsoleApp.Interface;
+﻿using ConsoleApp1.Enum;
+using ConsoleApp1.Interface;
 
-namespace ConsoleApp.coffeeMaker;
+namespace ConsoleApp1.coffeeMaker;
 
 public class OriginalCoffeeMaker : ICoffeeMaker
 {
+    private readonly int _generateTime = 100;
     private Taste Taste => Taste.Original;
 
     public async Task<List<Coffee>> GenerateCoffee()
     {
-        System.Console.WriteLine($"準備生產{Taste.ToString()}");
-        await Task.Delay(100);
+        Console.WriteLine($"準備生產{Taste.ToString()}");
+        await Task.Delay(_generateTime);
         var list = new List<Coffee>();
 
         for(int i = 0; i < 6; i++)
@@ -18,7 +19,7 @@ public class OriginalCoffeeMaker : ICoffeeMaker
             list.Add(new Coffee(Taste));
         }
 
-        System.Console.WriteLine($"已生產一組{Taste.ToString()}");
+        Console.WriteLine($"已生產一組{Taste.ToString()}");
         return list;
     }
 }
